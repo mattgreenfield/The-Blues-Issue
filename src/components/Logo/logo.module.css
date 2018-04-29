@@ -1,0 +1,35 @@
+@value variables: "../../styles/variables.css";
+@value red, font-family-title from variables;
+
+.logo {
+    font-family: "OldPress", sans-serif;
+    font-weight: normal;
+    margin-bottom: 2em;
+    color: white;
+    max-width: 38ch;
+    line-height: 1;
+
+    * + * {
+        margin-top: 0;
+    }
+
+}
+
+.logo__main {
+    color: red;
+    font-size: 3em;
+    display: block;
+}
+
+.logo__top {
+    display: block;
+    text-align: left;
+}
+
+.logo__bottom {
+    background-color: #25387f;
+    display: inline;
+    float: right;
+    padding: 0.1em 0.2em;
+    margin-top: -0.2em;
+}

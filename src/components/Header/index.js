@@ -2,36 +2,29 @@ import React from 'react'
 import Link from 'gatsby-link'
 import './styles.scss'
 
-const pageTitle = "Home";
+import Logo from '../../components/Logo'
 
-const Header = () => (
+const Header = ({removeLogo}) => (
   <div>
     <a href="#page-main">Skip to main content</a>
     <header className="page-header page-constraint page-constraint--large">
-      { pageTitle === "Home" && (
-          <div className="logo">
-            <Link to="/">
-                <img src="/assets/img/logo.jpg"  alt="The Blues Issue Logo" />
-            </Link>
-          </div>
-      )}
-
+      { !removeLogo && <Logo isLink /> }
       <nav role="navigation" className="page-nav">
           <ul className="reset-list list--inline">
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about" activeClassName="is-active">About</Link>
               </li>
               <li>
-                <Link to="/gigs">Gigs</Link>
+                <Link to="/gigs" activeClassName="is-active">Gigs</Link>
               </li>
               <li>
-                <Link to="/archive">Gallery</Link>
+                <Link to="/gallery" activeClassName="is-active">Gallery</Link>
               </li>
               <li>
-                <Link to="/discography">Music</Link>
+                <Link to="/discography" activeClassName="is-active">Music</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact" activeClassName="is-active">Contact</Link>
               </li>
           </ul>
       </nav>

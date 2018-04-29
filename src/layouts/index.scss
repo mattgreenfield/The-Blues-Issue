@@ -1,7 +1,5 @@
 
-$blue: #4A5C9C;
-$red: #B20404;
-$font-family-title: 'OldPress', sans-serif;
+@import '../styles/variables';
 
 @font-face {
   font-family: 'OldPress';
@@ -91,6 +89,10 @@ img {
     margin: 0;
 }
 
+.util-text-decoration-none {
+    text-decoration: none;
+}
+
 //
 // Resets
 
@@ -149,17 +151,6 @@ p {
     font-weight: 700;
 }
 
-// Page Constraint
-.page-constraint {
-    max-width: 35rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-.page-constraint--large {
-    max-width: 1200px;
-}
-
-
 //
 // Layout side col
 .layout-side-col {
@@ -201,81 +192,6 @@ p {
     }
 }
 
-//
-// Page Footer
-.page-footer {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 4em;
-    border-top: 5px solid $blue;
-    padding-top: 2em;
-
-    * + * {
-        margin-top: 0;
-    }
-
-    small {
-        flex-basis: 100%;
-        font-size: 0.8em;
-    }
-
-    .logo {
-        width: 100px;
-        margin-right: 2em;
-        display: block;
-    }
-
-    // icons
-    svg {
-        width: 40px;
-        height:  40px;
-        fill: $blue;
-    }
-
-    .social-icons {
-        flex: 1;
-        text-align: right;
-        a {
-            display: block;
-        }
-    }
-}
-
-//
-// logo
-
-.logo {
-    font-family: $font-family-title;
-    font-weight: normal;
-    margin-bottom: 2em;
-    color: white;
-    max-width: 38ch;
-    line-height: 1;
-
-    * + * {
-        margin-top: 0;
-    }
-
-    .logo__main {
-        color: $red;
-        font-size: 3em;
-        display: block;
-    }
-
-    .logo__top {
-        display: block;
-        text-align: left;
-    }
-
-    .logo__bottom {
-        background-color: #25387f;
-        display: inline;
-        float: right;
-        padding: 0.1em 0.2em;
-        margin-top: -0.2em;
-    }
-
-}
 
 //
 // Inputs
@@ -377,7 +293,7 @@ a[href="#page-main"] {
 // Driver
 .driver {
     padding: 20px 0;
-    background-image: url('../img/driver.svg');
+    background-image: url('../assets/driver.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -469,34 +385,6 @@ a[href="#page-main"] {
         color: white;
         a {
             color: inherit;
-        }
-    }
-    .home-header {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        margin-top: -300px;
-        padding-top: 300px;
-        z-index: -1;
-
-        background-color: black;
-        background-image: url('/assets/img/home-bg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        text-align: center;
-        border-bottom: 1px solid transparent;
-
-        .logo {
-            font-size: 2em;
-            margin: 3em auto 5em;
-            @media (max-width: 980px) {
-                font-size: 5vw;
-            }
         }
     }
 
