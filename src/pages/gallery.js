@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 
 import Wrapper from '../components/Wrapper'
 import Gallery from '../components/Gallery'
+import Heading from '../components/Heading'
 
 const GalleryPage = ({ data }) => {
     const images = data.allFile.edges.filter(item => item.node.ext === '.jpg')
@@ -12,7 +13,8 @@ const GalleryPage = ({ data }) => {
 
     return (
         <Wrapper size="large">
-            <Gallery items= { galleryItems } />
+            <Heading>Gallery</Heading>
+            <Gallery items= { galleryItems } style="grid" />
         </Wrapper>
     )
 }

@@ -1,35 +1,20 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import './styles.scss'
+import styles from './header.module.css'
 
 import Logo from '../../components/Logo'
+import PageNav from '../../components/PageNav'
 
 const Header = ({removeLogo}) => (
-  <div>
-    <a href="#page-main">Skip to main content</a>
-    <header className="page-header page-constraint page-constraint--large">
-      { !removeLogo && <Logo isLink /> }
-      <nav role="navigation" className="page-nav">
-          <ul className="reset-list list--inline">
-              <li>
-                <Link to="/about" activeClassName="is-active">About</Link>
-              </li>
-              <li>
-                <Link to="/gigs" activeClassName="is-active">Gigs</Link>
-              </li>
-              <li>
-                <Link to="/gallery" activeClassName="is-active">Gallery</Link>
-              </li>
-              <li>
-                <Link to="/discography" activeClassName="is-active">Music</Link>
-              </li>
-              <li>
-                <Link to="/contact" activeClassName="is-active">Contact</Link>
-              </li>
-          </ul>
-      </nav>
+    <header className={styles.PageHeader}>
+        { !removeLogo && (
+            <div className={styles.PageHeader_logo}>    
+                <Logo isLink />
+            </div>
+        )}
+        <div className={styles.PageHeader_nav}>
+            <PageNav />
+        </div>
     </header>
-  </div>
 )
 
 export default Header

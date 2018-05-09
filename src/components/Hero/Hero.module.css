@@ -1,7 +1,5 @@
 
-@import '../../styles/variables';
-
-.home-header {
+.Hero {
     width: 100vw;
     position: relative;
     left: 50%;
@@ -20,12 +18,13 @@
 
     text-align: center;
     border-bottom: 1px solid transparent;
+    margin-bottom: 40px;
+}
 
-    .logo {
-        font-size: 2em;
-        margin: 3em auto 5em;
-        @media (max-width: 980px) {
-            font-size: 5vw;
-        }
+.Hero__Logo {
+    font-size: 2em;
+    margin: 3em auto 5em;
+    @media (max-width: 980px) {
+        font-size: 5vw;
     }
 }

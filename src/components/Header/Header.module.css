@@ -1,0 +1,26 @@
+
+.PageHeader {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+}
+
+.PageHeader_logo {
+    flex-grow: 1;
+    margin: auto;
+}
+
+.PageHeader_nav {
+    flex-grow: 9999;
+    flex-shrink: 0;
+    flex-basis: auto;
+    text-align: right;
+    margin-left: 40px;
+
+    @media (max-width: 670px) {
+        text-align: center;
+        margin: 0;
+        font-size: 3.5vw;
+    }
+}

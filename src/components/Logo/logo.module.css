@@ -1,18 +1,21 @@
 @value variables: "../../styles/variables.css";
-@value red, font-family-title from variables;
+@value red, blue, font-family-title from variables;
 
 .logo {
     font-family: "OldPress", sans-serif;
     font-weight: normal;
-    margin-bottom: 2em;
     color: white;
     max-width: 38ch;
     line-height: 1;
+    display: block;
+    margin: auto;
+}
 
-    * + * {
-        margin-top: 0;
-    }
-
+.logo__top {
+    display: block;
+    text-align: left;
+    margin-bottom: -0.2em;
+    color: blue;
 }
 
 .logo__main {
@@ -21,15 +24,12 @@
     display: block;
 }
 
-.logo__top {
-    display: block;
-    text-align: left;
-}
-
 .logo__bottom {
-    background-color: #25387f;
+    background-color: blue;
     display: inline;
     float: right;
     padding: 0.1em 0.2em;
-    margin-top: -0.2em;
+    margin-top: -0.25em;
+    z-index: 2;
+    position: relative;
 }

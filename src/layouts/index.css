@@ -1,0 +1,84 @@
+@value variables: "../styles/variables.css";
+@value blue from variables;
+
+@font-face {
+  font-family: 'OldPress';
+  src:  url('../fonts/old-press.woff2') format('woff2'),
+        url('../fonts/old-press.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    font-size: 1.1em;
+}
+
+body {
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ============
+    TYPOGRAPHY
+   ============ */
+a {
+    color: blue;
+    font-weight: bold;
+}
+
+p {
+    text-indent: 1.5em;
+}
+
+
+/*//
+// Layout side col*/
+.layout-side-col {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 40px;
+
+    @media screen and (max-width: 850px ) {
+        display: block;
+    }
+}
+
+
+/*//
+// Inputs*/
+
+
+.text-input {
+    width: 100%;
+    font-size: 1em;
+    padding: .8em;
+    border: 3px solid blue;
+    margin-top: 0;
+}

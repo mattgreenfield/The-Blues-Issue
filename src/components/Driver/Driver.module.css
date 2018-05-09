@@ -1,0 +1,11 @@
+
+.Driver {
+    padding: 20px 0;
+    background-image: url('../../assets/driver.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.DriverLink {
+    display: block;
+}

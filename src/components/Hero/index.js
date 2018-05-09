@@ -1,17 +1,20 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
-import './styles.scss'
-
+import Wrapper from '../../components/Wrapper'
 import Logo from '../../components/Logo'
 
+import styles from './Hero.module.css'
+import { blue } from '../../styles/variables.css';
+console.log(blue);
+
+
 const Hero = () => (
-    <div className="home-header">
-        <div className="page-constraint page-constraint--large">
-            <h1>
+    <div className={ styles.Hero }>
+        <Wrapper>
+            <h1 className={ styles.Hero__Logo }>
                 <Logo />
             </h1>
-        </div>
+        </Wrapper>
     </div>
 )
 

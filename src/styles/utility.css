@@ -1,0 +1,49 @@
+
+.util-text-align-center {
+    text-align: center
+}
+
+.util-column-2 {
+    column-count: 2;
+}
+
+.util-reset-margin * {
+    margin-top: 0;
+}
+
+.util-float-right {
+    float: right;
+}
+
+.util-no-margin {
+    margin: 0;
+}
+
+.util-text-decoration-none {
+    text-decoration: none;
+}
+
+.reset-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.list--inline > li {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.type--bold {
+    font-weight: 700;
+}
+
+.a11yHidden {
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}

@@ -1,0 +1,18 @@
+@value variables: "../../styles/variables.css";
+@value blue from variables;
+
+.Button {
+    background: blue;
+    color: white;
+    border: 0;
+    font-size: 1em;
+    padding: .6em 1em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.Button[data-style="ghost"] {
+    background: transparent;
+    border: 2px solid blue;
+    color: blue;
+}

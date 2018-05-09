@@ -1,0 +1,24 @@
+@value variables: "../../styles/variables.css";
+@value font-family-title from variables;
+
+.PageNav {
+    font-family: font-family-title;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.PageNav__list {
+    composes: reset-list from "../../styles/utility.css";
+    composes: list--inline from "../../styles/utility.css";
+}
+
+.PageNav__item {
+    margin-right: .5em;
+}
+.PageNav__item:last-child {
+    margin-right: 0;
+}
+
+.PageNav__item__link {
+    composes: util-text-decoration-none from "../../styles/utility.css";
+}

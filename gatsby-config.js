@@ -4,7 +4,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
         resolve: `gatsby-plugin-manifest`,
         options: {
@@ -14,7 +13,7 @@ module.exports = {
           background_color: "#4A5C9C",
           theme_color: "#B20404",
           display: "minimal-ui",
-          icon: "src/img/logo.jpg", // This path is relative to the root of the site.
+          icon: "src/assets/logo.jpg", // This path is relative to the root of the site.
         },
     },
     'gatsby-plugin-offline',

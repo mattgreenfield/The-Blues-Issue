@@ -1,0 +1,31 @@
+@value variables: "../../styles/variables.css";
+@value blue from variables;
+
+.PageFooter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4em;
+    border-top: 5px solid blue;
+    padding-top: 2em;
+    align-items: center;
+}
+
+.Footer__nav {
+    flex: 1;
+    text-align: right;
+    padding: 0 30px;
+}
+
+.Copyright {
+    flex-basis: 100%;
+    text-align: right;
+}
+
+.Footer__social {
+    composes: reset-list from "../../styles/utility.css";
+    composes: list--inline from "../../styles/utility.css";
+}
+
+.Footer__social__item {
+    margin-right: 10px;
+}

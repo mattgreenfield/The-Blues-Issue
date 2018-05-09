@@ -4,12 +4,14 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import SkipLink from '../components/SkipLink'
+import Wrapper from '../components/Wrapper'
 
-import './index.scss'
+import './index.css'
 
 const TemplateWrapper = ({ children, location, data }) => {
     const siteName = data.site.siteMetadata.title
-    
+
     return (
         <div>
             <Helmet
@@ -18,9 +20,14 @@ const TemplateWrapper = ({ children, location, data }) => {
                     { name: 'description', content: 'Sample' },
                     { name: 'keywords', content: 'sample, something' },
                 ]}
-                />
-            <Header removeLogo={ location.pathname === '/' }/>
-            {children()}
+            />
+            <SkipLink />
+            <Wrapper size="large">
+                <Header removeLogo={ location.pathname === '/' }/>
+            </Wrapper>
+            <main id="page-main">
+                {children()}
+            </main>
             <Footer siteName={ siteName } />
         </div>
     )

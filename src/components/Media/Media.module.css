@@ -1,0 +1,14 @@
+
+.Media {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.MediaImage {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.MediaDescription {
+    flex: 3;
+}

@@ -1,13 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
-
 import GalleryItem from './GalleryItem'
 
 import styles from './gallery.module.css'
 
-const GalleryGrid = ({items}) => {
+const GalleryCarousel = ({items}) => {
     return (
-        <ul className={styles.GalleryGrid} data-style="grid">
+        <ul className={styles.GalleryCarousel} data-style="grid">
             { items.map((item, index) => (
                 <li className={styles.Gallery__item} key={index}>
                     <GalleryItem item={ item } />
@@ -17,4 +15,4 @@ const GalleryGrid = ({items}) => {
     )
 }
 
-export default GalleryGrid
+export default GalleryCarousel
