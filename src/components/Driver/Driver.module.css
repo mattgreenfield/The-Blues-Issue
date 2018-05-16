@@ -4,6 +4,7 @@
     background-image: url('../../assets/driver.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 20px;
 }
 
 .DriverLink {

@@ -5,10 +5,10 @@ import styles from './gallery.module.css'
 
 const GalleryCarousel = ({items}) => {
     return (
-        <ul className={styles.GalleryCarousel} data-style="grid">
+        <ul className={styles.GalleryCarousel}>
             { items.map((item, index) => (
-                <li className={styles.Gallery__item} key={index}>
-                    <GalleryItem item={ item } />
+                <li className={styles.GalleryCarousel__item} key={index}>
+                    <GalleryItem image={ item } />
                 </li>
             ))}
         </ul>

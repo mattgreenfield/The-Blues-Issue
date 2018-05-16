@@ -1,63 +1,61 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
-import Wrapper from '../components/Wrapper'
-import Heading from '../components/Heading'
-import Table from '../components/Table'
-import Button from '../components/Button'
+import Wrapper from '../components/Wrapper';
+import Heading from '../components/Heading';
+import Table from '../components/Table';
+import Button from '../components/Button';
+import Date from '../components/Date';
 
-const events = [{
-    id: '123',
-    date: '29 Sep',
-	title: 'DUKE OF WELLINGTON, Shoreham-by-Sea',
-	time: '9pm',
-}, {
-    id: '123',
-    date: '13 Oct',
-	title: 'The NEPTUNE HOVE, Hove',
-	time: '9pm',
-}, {
-    id: '123',
-    date: '14 Oct',
-	title: 'WHITBY BLUES FESTIVAL, Whitby',
-	time: '2pm',
-}, {
-    id: '123',
-    date: '17 Nov',
-	title: 'THE EGREMONT WORTHING, Worthing',
-	time: '9pm',
-}, {
-    id: '123',
-    date: '01 Dec',
-	title: 'The Eagle Arundel 1st Dec, Arundel',
-	time: '9am',
-}, {
-    id: '123',
-    date: '21 Jan',
-	title: 'Skegness Blues And Rock Festival, Skegness',
-	time: '4pm',
-}];
+const events = [
+  {
+    id: 1,
+    date: { month: 'MAY', day: '18' },
+    time: '9pm',
+    title: 'The Egremont, Worthing',
+  },
+  {
+    id: 2,
+    date: { month: 'MAY', day: '25' },
+    time: '9pm',
+    title: 'The Neptune, Hove',
+  },
+  {
+    id: 3,
+    date: { month: 'JUL', day: '21' },
+    time: '9pm',
+    title: 'Upton Blues Festival, Upton upon Severn',
+  },
+  {
+    id: 4,
+    date: { month: 'AUG', day: '18' },
+    time: '9pm',
+    title: 'Duke Of Wellington, Shoreham-by-Sea',
+  },
+];
 
 const GigsPage = () => {
+  const headings = ['Date', 'Title', 'Time', 'More information'];
+  const data = [];
+  events.map((event) => {
+    data.push([
+      <Date month={event.date.month} day={event.date.day} />,
+      event.title,
+      event.time,
+      <Button to={`facebook.com/${event.id}`}>More Info</Button>,
+    ]);
+  });
 
-    const headings = ['Date', 'Title', 'Time', 'More information'];
-    const data = [];
-    events.map(event => {
-        data.push([
-            event.date,
-            event.title,
-            event.time,
-            <Button to={ `facebook.com/${event.id}` }>More Info</Button>
-        ])
-    });
+  return (
+    <Wrapper>
+      <Heading>Gigs</Heading>
+      <Table headings={headings} data={data} />
+      <span>
+        For all gigs visit our{' '}
+        <a href="https://www.facebook.com/pg/TheBluesIssue/events/">Facebook page</a>
+      </span>
+    </Wrapper>
+  );
+};
 
-    return (
-        <Wrapper size="large">
-            <Heading>Gigs</Heading>
-            <Table headings={ headings } data={ data } />
-            <span>For all gigs visit our <a href="https://www.facebook.com/pg/TheBluesIssue/events/">Facebook page</a></span>
-        </Wrapper>
-    )
-}
-
-export default GigsPage
+export default GigsPage;

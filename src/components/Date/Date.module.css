@@ -1,0 +1,24 @@
+@value variables: "../../styles/variables.css";
+@value red, blue, font-family-title from variables;
+
+.Date {
+    font-family: font-family-title;
+    line-height: 0.9;
+    text-align: center;
+}
+
+.Month {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    color: red;
+}
+
+.Day {
+    color: blue;
+    font-size: 2em;
+}
+
+.DayDigit {
+    width: 50%;
+    display: inline-block;
+}

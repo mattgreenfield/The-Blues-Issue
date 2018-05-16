@@ -3,30 +3,30 @@
 
 @font-face {
   font-family: 'OldPress';
-  src:  url('../fonts/old-press.woff2') format('woff2'),
-        url('../fonts/old-press.woff') format('woff');
+  src: url('../fonts/old-press.woff2') format('woff2'),
+    url('../fonts/old-press.woff') format('woff');
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 html {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 body {
-    padding: 20px;
-    max-width: 1500px;
-    margin: 0 auto;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
 
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
 }
 
 h1,
@@ -36,49 +36,49 @@ h4,
 h5,
 h6,
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
-
 
 /* ============
     TYPOGRAPHY
    ============ */
 a {
-    color: blue;
-    font-weight: bold;
+  color: blue;
+  font-weight: bold;
 }
 
 p {
-    text-indent: 1.5em;
+  text-indent: 1.5em;
 }
-
 
 /*//
 // Layout side col*/
 .layout-side-col {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-column-gap: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 40px;
 
-    @media screen and (max-width: 850px ) {
-        display: block;
-    }
+  @media screen and (max-width: 850px) {
+    display: block;
+  }
 }
-
 
 /*//
 // Inputs*/
 
-
 .text-input {
-    width: 100%;
-    font-size: 1em;
-    padding: .8em;
-    border: 3px solid blue;
-    margin-top: 0;
+  width: 100%;
+  font-size: 1em;
+  padding: 0.8em;
+  border: 3px solid blue;
+  margin-top: 0;
+}
+
+.gatsby-image-outer-wrapper {
+  position: static !important;
 }

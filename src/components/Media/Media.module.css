@@ -6,7 +6,8 @@
 
 .MediaImage {
     flex: 1;
-    padding-right: 20px;
+    margin-right: 20px;
+    max-width: 200px;
 }
 
 .MediaDescription {

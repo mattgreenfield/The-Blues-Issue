@@ -8,13 +8,13 @@ import Heading from '../components/Heading'
 const GalleryPage = ({ data }) => {
     const images = data.allFile.edges.filter(item => item.node.ext === '.jpg')
     const galleryItems = images.map(item => {
-        return { url: item.node.publicURL }
+        return { sizes: item.node.childImageSharp.sizes }
     });
 
     return (
         <Wrapper size="large">
             <Heading>Gallery</Heading>
-            <Gallery items= { galleryItems } style="grid" />
+            <Gallery items={ galleryItems } style="grid" />
         </Wrapper>
     )
 }
@@ -28,6 +28,11 @@ export const query = graphql`
         node {
           publicURL
           ext
+          childImageSharp {
+            sizes(maxWidth: 475) {
+                ...GatsbyImageSharpSizes
+            }
+          }
         }
       }
     }

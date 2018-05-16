@@ -1,6 +1,5 @@
-
 .Gallery {
-    composes: reset-list from "../../styles/utility.css";
+  composes: reset-list from '../../styles/utility.css';
 }
 
 /*
@@ -8,37 +7,38 @@
 */
 
 .GalleryGrid {
-    composes: Gallery;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10px;
+  composes: Gallery;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
 }
 
-.GalleryGrid .Gallery__item:nth-child(4n) {
-    grid-column-end: span 2;
-    grid-row-end: span 2;
+.GalleryGrid__item {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+  position: relative;
+  min-height: 300px;
 }
 
-.GalleryGrid .Gallery__item:nth-child(13),
-.GalleryGrid .Gallery__item:nth-child(17) {
-    grid-column-end: span 1;
-    grid-row-end: span 2;
+.GalleryGrid__itemSmall {
+  composes: GalleryGrid__item;
+  grid-column: 1;
+  grid-column-start: auto;
 }
 
-.GalleryGrid .Gallery__item:nth-child(28) {
-    grid-column-end: span 3;
-    grid-row-end: span 2;
-}
-
-.GalleryGrid .Gallery__item:nth-child(44) {
-    grid-column-end: span 3;
+.GridImageWrapper {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .Gallery__item__image {
-    display: block;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 /*
@@ -46,16 +46,17 @@
 */
 
 .GalleryCarousel {
-    composes: reset-list from "../../styles/utility.css" list--inline from "../../styles/utility.css";
-    overflow: auto;
-    display: flex;
-    margin-bottom: 20px;
+  composes: reset-list from '../../styles/utility.css' list--inline from '../../styles/utility.css';
+  overflow: auto;
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.GalleryCarousel .Gallery__item {
-    width: 20%;
-    min-width: 200px;
-    vertical-align: top;
-    height: 200px;
-    flex-shrink: 0;
+.GalleryCarousel__item {
+  width: 20%;
+  min-width: 200px;
+  vertical-align: top;
+  height: 200px;
+  flex-shrink: 0;
+  position: relative;
 }

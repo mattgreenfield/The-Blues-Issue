@@ -1,10 +1,17 @@
 import React from 'react'
+import Img from "gatsby-image";
 
 import styles from './gallery.module.css'
 
-const GalleryItem = ({item}) => {
+const GalleryItem = ({image}) => {
     return (
-        <img className={styles.Gallery__item__image} src={ item.url } alt={ item.alt } />
+        <Img
+            sizes={ image.sizes }
+            resolutions={ image.resolutions }
+            className={ styles.Gallery__item__image }
+            outerWrapperClassName={ styles.GridImageWrapper }
+            alt={ image.alt }
+        />
     )
 }
 

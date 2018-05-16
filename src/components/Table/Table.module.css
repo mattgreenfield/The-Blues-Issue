@@ -2,9 +2,13 @@
 @value blue from variables;
 
 .Table {
-    border-spacing: 4em 0;
+    border-spacing: 2em 0;
 }
 
 .TableHead {
     composes: a11yHidden from "../../styles/utility.css";
+}
+
+.TableCell {
+    padding-bottom: 20px;
 }

@@ -1,0 +1,9 @@
+.Grid {
+  margin-left: -20px;
+}
+
+.GridItem {
+  padding-left: 20px;
+  vertical-align: top;
+  display: inline-block;
+}
