@@ -1,18 +1,18 @@
-import React from 'react'
-import Img from "gatsby-image";
+import React from 'react';
+import Img from 'gatsby-image';
 
-import styles from './gallery.module.css'
+import styles from './gallery.module.css';
 
-const GalleryItem = ({image}) => {
-    return (
-        <Img
-            sizes={ image.sizes }
-            resolutions={ image.resolutions }
-            className={ styles.Gallery__item__image }
-            outerWrapperClassName={ styles.GridImageWrapper }
-            alt={ image.alt }
-        />
-    )
-}
+const GalleryItem = ({ image, onClick }) => (
+  <button type="button" onClick={onClick}>
+    <Img
+      sizes={image.sizes}
+      resolutions={image.resolutions}
+      className={styles.Gallery__item__image}
+      outerWrapperClassName={styles.GalleryItemImageWrapper}
+      alt={image.alt}
+    />
+  </button>
+);
 
-export default GalleryItem
+export default GalleryItem;

@@ -2,27 +2,22 @@
 @value red, font-family-title from variables;
 
 .Heading {
-    font-family: font-family-title;
-    font-weight: normal;
-    font-size: 3.5em;
-    line-height: 1;
-    margin-bottom: 0.3em;
-    position: relative;
-    display: inline-block;
-    color: #353535;
-    z-index: 0;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  color: #353535;
+  z-index: 0;
 
-    &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 10px;
-        background: red;
-        width: 100%;
-        left: -4px;
-        bottom: 4px;
-        z-index: -1;
-        opacity: 0.5;
-    }
-
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 10px;
+    background: red;
+    width: 100%;
+    left: -4px;
+    bottom: 4px;
+    z-index: -1;
+    opacity: 0.5;
+  }
 }

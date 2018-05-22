@@ -9,22 +9,10 @@ import Date from '../components/Date';
 
 const events = [
   {
-    id: 1,
-    date: { month: 'MAY', day: '18' },
-    time: '9pm',
-    title: 'The Egremont, Worthing',
-  },
-  {
     id: 2,
     date: { month: 'MAY', day: '25' },
     time: '9pm',
     title: 'The Neptune, Hove',
-  },
-  {
-    id: 3,
-    date: { month: 'JUL', day: '21' },
-    time: '9pm',
-    title: 'Upton Blues Festival, Upton upon Severn',
   },
   {
     id: 4,

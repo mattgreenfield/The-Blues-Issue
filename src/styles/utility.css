@@ -1,41 +1,30 @@
-
 .util-text-align-center {
-    text-align: center
-}
-
-.util-column-2 {
-    column-count: 2;
-}
-
-.util-reset-margin * {
-    margin-top: 0;
+  text-align: center;
 }
 
 .util-float-right {
-    float: right;
+  float: right;
 }
 
 .util-no-margin {
-    margin: 0;
+  margin: 0;
 }
 
 .util-text-decoration-none {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .reset-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
+  list-style-type: none;
+  margin-left: 0;
 }
 
 .list--inline > li {
-    display: inline-block;
-    margin-top: 0;
+  display: inline-block;
 }
 
 .type--bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .a11yHidden {

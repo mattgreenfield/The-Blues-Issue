@@ -7,7 +7,10 @@ import Gallery from '../components/Gallery';
 
 const AboutPage = ({ data }) => {
   const images = data.allFile.edges.filter(item => item.node.ext === '.jpg').slice(0, 8);
-  const galleryItems = images.map(item => ({ resolutions: item.node.childImageSharp.resolutions }));
+  const galleryItems = images.map(item => ({
+    resolutions: item.node.childImageSharp.resolutions,
+    sizes: item.node.childImageSharp.sizes,
+  }));
 
   return (
     <div>
@@ -92,6 +95,9 @@ export const query = graphql`
           childImageSharp {
             resolutions(height: 200) {
               ...GatsbyImageSharpResolutions
+            }
+            sizes(maxWidth: 700) {
+              ...GatsbyImageSharpSizes
             }
           }
         }

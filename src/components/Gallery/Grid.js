@@ -5,7 +5,7 @@ import GalleryItem from './GalleryItem';
 
 import styles from './gallery.module.css';
 
-const GalleryGrid = ({ items }) => {
+const GalleryGrid = ({ items, onClick }) => {
   // replicate nth child in JS. 2, 4, 6, 11, 13, 15, 20, 22, 24, etc
   const sets = Math.ceil(items.length / 9);
   const ar = [2, 4, 6];
@@ -26,7 +26,12 @@ const GalleryGrid = ({ items }) => {
             key={index}
             data-index={index}
           >
-            <GalleryItem image={item} />
+            <GalleryItem
+              image={item}
+              onClick={() => {
+                onClick(index);
+              }}
+            />
           </li>
         );
       })}

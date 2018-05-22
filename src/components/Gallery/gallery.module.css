@@ -2,6 +2,20 @@
   composes: reset-list from '../../styles/utility.css';
 }
 
+.Gallery__item {
+  margin-bottom: 0;
+  position: relative;
+}
+
+.GalleryItemImageWrapper {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
 /*
     Grid
 */
@@ -14,9 +28,9 @@
 }
 
 .GalleryGrid__item {
+  composes: Gallery__item;
   grid-column-end: span 2;
   grid-row-end: span 2;
-  position: relative;
   min-height: 300px;
 }
 
@@ -24,14 +38,6 @@
   composes: GalleryGrid__item;
   grid-column: 1;
   grid-column-start: auto;
-}
-
-.GridImageWrapper {
-  position: absolute !important;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
 }
 
 .Gallery__item__image {
@@ -53,10 +59,10 @@
 }
 
 .GalleryCarousel__item {
+  composes: Gallery__item;
   width: 20%;
   min-width: 200px;
   vertical-align: top;
   height: 200px;
   flex-shrink: 0;
-  position: relative;
 }
