@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import Img from 'gatsby-image'
 import Lightbox from '../Lightbox'
 
 import Grid from './Grid'
@@ -12,15 +11,13 @@ class Gallery extends Component {
   constructor(props) {
     super(props)
 
-    console.log(this.props.items[this.state.index].sizes)
     this.openLightbox = index => {
       const sizes = this.props.items[index].sizes
+      // const style = sizes.aspectRatio > 1 ? { width: '90vw' } : { height: '90vh' }
       this.setState({
         index,
         lightboxOpen: true,
-        lightboxContent: (
-          <Img sizes={sizes} style={{ width: sizes.aspectRatio > 1 ? '90vw' : '50vw' }} />
-        ),
+        lightboxImageSizes: sizes,
       })
     }
     this.hideLightbox = () => {
@@ -38,7 +35,7 @@ class Gallery extends Component {
 
   render() {
     const { items, style } = this.props
-    const { lightboxOpen, lightboxContent } = this.state
+    const { lightboxOpen, lightboxImageSizes } = this.state
 
     if (!items || items.length === 0) {
       return false
@@ -53,7 +50,7 @@ class Gallery extends Component {
     return (
       <div>
         {style === 'grid' ? <Grid {...gridProps} /> : <Carousel {...gridProps} />}
-        {lightboxOpen && <Lightbox handleClose={this.hideLightbox}>{lightboxContent}</Lightbox>}
+        {lightboxOpen && <Lightbox handleClose={this.hideLightbox} sizes={lightboxImageSizes} />}
       </div>
     )
   }
