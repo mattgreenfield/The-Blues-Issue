@@ -1,0 +1,8 @@
+@value variables: "../../styles/variables.css";
+@value blue from variables;
+
+.Icon {
+    display: block;
+    width: 40px;
+    color: blue;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from '../Logo';
 import PageNav from '../PageNav';
-import Icon from '../Icon';
+import Icon from '../SvgIcon';
 
 import styles from './Footer.module.css';
 
