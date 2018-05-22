@@ -17,10 +17,15 @@ const TemplateWrapper = ({ children, location, data }) => {
       <Helmet
         title={siteName}
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          {
+            name: 'description',
+            content:
+              'The Blues Issue are a Blues Band from Worthing and Brighton, England. Playing a mix of blues classics and their own original songs',
+          },
         ]}
-      />
+      >
+        <html lang="en" />
+      </Helmet>
       <SkipLink />
       <Wrapper size="large">
         <Header removeLogo={location.pathname === '/'} />

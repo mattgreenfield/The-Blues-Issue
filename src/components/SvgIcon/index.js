@@ -16,7 +16,7 @@ const Icon = ({ type }) => {
       break;
   }
   return (
-    <span aria-describedby={`${type} icon`} className={styles.Icon}>
+    <span aria-label={`${type} icon`} className={styles.Icon}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox={viewbox} fill="currentColor">
         <path d={path} />
       </svg>
