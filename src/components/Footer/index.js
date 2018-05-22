@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Logo from '../../components/Logo';
-import PageNav from '../../components/PageNav';
-import Icon from '../../components/Icon';
+import Logo from '../Logo';
+import PageNav from '../PageNav';
+import Icon from '../Icon';
 
 import styles from './Footer.module.css';
 
